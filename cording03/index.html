@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3回目のコーディング講義</title>
+  </head>
+  <body>
+    <script>
+      var test = "javascript記述例です";
+
+      test = "javascriptです";
+      console.log(test);
+      //varは再代入、再宣言ができる
+      let test01 = "javascript記述例です";
+      test01 = "javascriptです";
+      console.log(test01);
+
+      //letは再代入はできるけど、再宣言ができない
+
+      const test02 = "javascript記述例です";
+      console.log(test02);
+
+      //constは再宣言も再代入もできない
+
+
+let num01="1+2";//文字列型
+console.log(num01);
+let num02=1+2;//数字型
+console.log(num02);
+
+let array=["ブドウ","みかん","もも"];
+console.log(array.push("キウイ"));//配列に追加できる
+console.log(array[1]);//配列型　配列は０番目からスタート
+console.log(array.length);//配列の総合計を出す
+
+
+//条件分岐
+let num03=2;
+if (num03>8) {
+    console.log("これは4より大きいです");}
+
+    else if(num03>1){
+console.log("これは１より大きい");
+    }
+    else{
+console.log("これは４より小さい");
+    }
+
+    //==は同じならTRUE,＝＝＝は型も内容も一緒ならTRUE
+    //!=は違うならTRUE,！＝＝方も内容も違うならTRUE
+
+
+    //while文 超えたい数が条件基準 ゲーム作る時には使うけど普段は使わない
+    let num08=1;
+    while(num08<100){//これを超えた時にストップする
+        num08=num08*2;//それまでの間の再代入
+    }
+    console.log(num08);
+
+
+    //for文　繰り返したい回数が条件基準
+    let num09=0;
+    for(i=0;i<5;i++){//iは繰り返す回数
+    num09=num09+1;
+    }
+console.log(num09);
+
+</script>
+
+  </body>
+</html>
