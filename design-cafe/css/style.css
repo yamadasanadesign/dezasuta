@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+/* 全体 */
+body {
+    background-color: #e9d9c0;
+    color: #4F270B;
+    font-family: "Noto Sans JP", sans-serif;
+line-height: 150%;
+    font-size: 14px;
+    margin: 0 auto;
+   align-items: center;
+   text-align: center;
+}
+
+/* ヘッダー */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 180%;
+}
+
+.header_nav ul {
+    display: flex;
+    gap: 48px;
+    font-family: "Alatsi", sans-serif;
+    padding: 0 0.44%;
+    /*64/1440*/
+    position: absolute;
+    width: 100%;
+    top: 30px;
+}
+
+/* 幅1000px */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* 幅100% */
+header,
+.gallery,
+.access,
+.map,
+footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 全体の縦方向の間隔 */
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 144px;
+}
+
+/* セクション見出し */
+.section-title {
+    font-family: "Diplomata SC", serif;
+    color: #D20202;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* 横並びのもの */
+header,
+.aboutus,
+.menu-contents,
+.gallery-image,
+.news,
+.footer,
+.footer-detail {
+    display: flex;
+}
+
+
+
+/*ヘッダー*/
+header{
+    height: 100px;
+    position: absolute;
+    top:0;
+    justify-content: space-between;
+    padding: 0 64px;
+    text-align: left;
+}
+
+h1 img{
+    width: 30%;
+}
+
+.header_nav ul li a{
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+
+
+/* FV */
+.main-visual img{
+width: 100%;
+}
+
+
+
+/* キャッチコピー セクション */
+.catchcopy{
+    width: 60%;
+    gap: 16px;
+}
+
+.catchcopy h2 {
+    font-size: 64px;
+    line-height: 150%;
+}
+
+.catchcopy p{
+    font-size: 24px;
+}
+
+.sub-catchcopy {
+    font-family: "Alatsi", sans-serif;
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+
+/*about us*/
+.aboutus{
+    gap: 40px;
+}
+
+.aboutus .section-title{
+    text-align: left;
+}
+
+.aboutus-image {
+    width: 440px;
+    height: 478px;
+    object-fit: cover;
+    border-bottom-right-radius: 64px;
+}
+
+.aboutus h3 {
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.aboutus-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 16px;
+}
+
+/* MENU */
+.menu-title {
+    font-family: "Diplomata SC", serif;
+    font-size: 26px;
+    color: #D20202;
+    text-align: left;
+    margin-top: -16px;
+}
+
+.menu-type img {
+    width: 312px;
+    border-top-right-radius: 64px;
+}
+
+/*gallery*/
+.gallery-image img{
+width: calc(100%/5);
+}
+
+/* EVENT */
+.event-news {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 32px 0;
+    border: 1px #4F270B solid;
+    gap: 16px;
+    padding: 32px 0;
+
+}
+
+.news {
+    width: 630px;
+    gap: 40px;
+     margin: 0 auto;
+}
+
+/*マップ*/
+.map{
+    filter: grayscale(100%);
+}
+
+
+/* フッター */
+footer {
+    background-color: #FFFFFF;
+}
+
+.footer{
+    justify-content: space-between;
+}
+
+.footer h2{
+    font-family: "Diplomata SC", serif;
+    font-size: 28px;
+}
+
+.footer-detail {
+    gap: 40px;
+}
+
+.copyright{
+    margin: 60px 0;
+    text-align: left;
+}
+
+
+/* 戻るボタン */
+.to-top {
+    width: 140px;
+    aspect-ratio: 1/1;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
