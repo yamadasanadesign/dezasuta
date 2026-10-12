@@ -204,6 +204,7 @@ footer {
 }
 
 .footer{
+    margin-top:80px;
     justify-content: space-between;
 }
 
