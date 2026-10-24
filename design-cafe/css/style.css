@@ -1,6 +1,7 @@
 @charset "utf-8";
-html{
-    scroll-behavior:smooth;
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* 全体 */
@@ -11,8 +12,7 @@ body {
     line-height: 150%;
     font-size: 14px;
     margin: 0 auto;
-    align-items: center;
-    text-align: center;
+   
 }
 
 /* ヘッダー */
@@ -52,26 +52,44 @@ header,
 .map,
 footer {
     width: 100%;
+
     margin: 0 auto;
 }
 
-/* セクション見出し */
-.section-title {
-    font-family: "Diplomata SC", serif;
-    color: #D20202;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 32px;
+/* スマホサイズ */
+@media screen and (max-width:768px) {
+    body {
+        width: 100%;
+    }
 }
+    .container,
+    .gallery,
+    .access {
+        margin-bottom: 80px;
+    }
+    
 
-/* 横並びのもの */
-header,
-.aboutus,
-.menu-contents,
-.gallery-image,
-.news,
-.footer,
-.footer-detail {
+    /* セクション見出し */
+    .section-title {
+        font-family: "Diplomata SC", serif;
+        color: #D20202;
+        font-size: 40px;
+        text-align: center;
+         margin: 0 auto 40px;
+    }
+
+    @media screen and (max-width:768px) {
+        .section-title{
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+        
+    }
+
+    /* 横並びのもの */
+    header,
+    .gallery-image,
+    .news{
     display: flex;
     align-items: start;
 
@@ -94,9 +112,121 @@ h1 {
 }
 
 .header_nav ul li a {
-     font-family: "Alatsi", sans-serif;
+    font-family: "Alatsi", sans-serif;
     color: #FFFFFF;
     font-size: 16px;
+}
+
+@media screen and (max-width:768px) {
+    header {
+    padding: 36px 24px;
+ 
+    }
+
+    h1 {
+    width: 244px;
+}
+}
+
+/*ハンバーガーメニューをPCで表示しない*/
+.header_nav-sp,
+.hamburger {
+    display: none;
+}
+
+/*ハンバーガーを1100pxから表示させる*/
+@media screen and (max-width:1100px) {
+    .header_nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        width: 54px;
+        height: 54px;
+        position: absolute;
+        /*親もabsoluteだけど上手いこといってるのでOK*/
+        right: 20px;
+        cursor: pointer;
+        /*ホバーした時にカーソルになる*/
+        z-index: 99999;
+    }
+
+    .hamburger span {
+        position: absolute;
+        top: 26px;
+        /*中央に持っていきたい*/
+        left: 7px;
+        width: 40px;
+        height: 2px;
+        background-color: #FFFFFF;
+        transition: 0.3s;
+    }
+
+    .hamburger::before {
+        position: absolute;
+        top: 13px;
+        left: 7px;
+        width: 40px;
+        height: 2px;
+        background-color: #FFFFFF;
+        content: "";
+        transition: 0.3s;
+    }
+
+    .hamburger::after {
+        position: absolute;
+        bottom: 13px;
+        left: 7px;
+        width: 40px;
+        height: 2px;
+        background-color: #FFFFFF;
+        content: "";
+        transition: 0.3s;
+    }
+
+    /*ハンバーガーを×にするために真ん中のspanを透明にする*/
+    .open span {
+        background-color: transparent;
+    }
+
+    .open::before {
+        transform: rotate(45deg);
+        top: 26px;
+    }
+
+    .open::after {
+        transform: rotate(-45deg);
+        bottom: 26px;
+    }
+
+    /*ハンバーガー押したら画面100％でメニューを表示させる*/
+    .header_nav-sp {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: -30px;
+        /*親のheaderで上３０pxあけてるのを埋める*/
+        left: 0;
+        background-color: #000000ba;
+    }
+
+    .header_nav-sp ul {
+        height: 100%;
+        display: flex;
+        gap: 48px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*縦横ともに中央寄せにするためにflexを使う*/
+    }
+
+    .header_nav-sp a {
+        color: #ffffff;
+        font-family: "Alatsi", sans-serif;
+        font-size: 36px;
+    }
+
 }
 
 
@@ -112,6 +242,7 @@ h1 {
 /* キャッチコピー セクション */
 .catchcopy {
     gap: 16px;
+    text-align: center;
 }
 
 .catchcopy h2 {
@@ -131,8 +262,13 @@ h1 {
 
 
 /*about us*/
+
+
 .aboutus {
     gap: 40px;
+
+    display: flex;
+    align-items: start;
 }
 
 .aboutus .section-title {
@@ -157,6 +293,32 @@ h1 {
     gap: 16px;
 }
 
+@media screen and (max-width:768px) {
+    .aboutus {
+
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+    .aboutus-image {
+    width: 100%;
+    border-bottom-right-radius: 0px;
+}
+
+    .aboutus h3 {
+        font-size: 24px;
+    }
+
+    .aboutus-text {
+        text-align: left;
+        gap: 14px;
+    }
+
+}
+
+
+
 /* MENU */
 .menu-title {
     font-family: "Diplomata SC", serif;
@@ -167,7 +329,9 @@ h1 {
 }
 
 .menu-contents {
+    display: flex;
     justify-content: space-between;
+
 }
 
 .menu-type {
@@ -178,97 +342,174 @@ h1 {
     border-top-right-radius: 64px;
 }
 
-.menu-type p {
-    text-align: left;
-}
 
-/*gallery*/
-.gallery-image img {
-    width: calc(100%/5);
-}
+@media screen and (max-width:768px) {
+    .menu-contents {
+        flex-direction: column;
+       gap: 40px;
+    }
 
-.gallery {
-    margin-bottom: 144px;
-}
-
-/* EVENT */
-.event-news {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 32px 0;
-    border: 1px #4F270B solid;
-    gap: 16px;
-}
-
-.news {
-    max-width: 630px;
-    width: 100%;
-    gap: 40px;
-    margin: 0 auto;
-}
-
-.news p {
-    font-size: 20px;
-}
-
-/*マップ*/
-.map {
-    filter: grayscale(100%);
-}
-
-iframe{
-    vertical-align: bottom;
+    .menu-type {
+        width: 100%;
+    }
 }
 
 
-/* フッター */
-footer {
-    background-color: #FFFFFF;
+    /*gallery*/
+    .gallery-image img {
+        width: calc(100%/5);
+    }
 
-}
+    .gallery {
+        margin-bottom: 144px;
+    }
 
-footer .container {
-    padding-bottom: 60px;
-    margin-bottom: 0;
-}
+    /* EVENT */
+    .event-news {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        padding: 32px 0;
+        border: 1px #4F270B solid;
+        gap: 16px;
+        margin: 0 auto;
+    }
 
-.footer {
-    justify-content: space-between;
-    padding: 80px 0 60px;
-}
+    .news {
+        max-width: 630px;
+        width: 100%;
+        gap: 40px;
+        margin: 0 auto;
+    }
 
-.footer h2 {
-    font-family: "Diplomata SC", serif;
-    font-size: 28px;
-}
+    .news p {
+        font-size: 20px;
 
-.footer-detail {
-    gap: 40px;
-    margin-bottom: 16px;
-}
+    }
 
-.footer-label{
-width: 64px;
-text-align: left;
-}
-
-.footer-info{
-    text-align: left;
-}
-
-.copyright {
-    margin-top: 60px;
-    text-align: left;
-}
+    @media screen and (max-width:768px) {
+        .event-news {
+            width: calc(100% - 40px);
+            flex-direction: column;
+            gap: 16px;
+            padding: 32px 20px;
+        }
 
 
-/* 戻るボタン */
-.to-top {
-    width: 140px;
-    aspect-ratio: 1/1;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
+        .news {
+           width: calc(100% - 40px);
+            gap: 32px;
+        }
+
+        .news p {
+            font-size: 16px;
+
+        }
+    }
+
+        /*マップ*/
+        .map {
+            filter: grayscale(100%);
+        }
+
+        iframe {
+            vertical-align: bottom;
+        }
+
+
+
+
+
+        /* フッター */
+        .footer,
+        .footer-detail {
+            display: flex;
+            align-items: start;
+        }
+
+        footer {
+            background-color: #FFFFFF;
+
+        }
+
+        footer .container {
+            padding-bottom: 60px;
+            margin-bottom: 0;
+        }
+
+        .footer {
+            justify-content: space-between;
+            padding: 80px 0 60px;
+        }
+
+        .footer h2 {
+            font-family: "Diplomata SC", serif;
+            font-size: 28px;
+        }
+
+        .footer-detail {
+            gap: 40px;
+            margin-bottom: 16px;
+        }
+
+        .footer-label {
+            width: 64px;
+            text-align: left;
+        }
+
+        .footer-info {
+            text-align: left;
+        }
+
+        .copyright {
+            margin-top: 60px;
+            text-align: left;
+        }
+
+
+
+        @media screen and (max-width:768px) {
+
+            footer .container {
+                margin: 80px 20px 0;
+            
+            
+            }
+
+            .footer {
+                width: fix-content;
+                flex-direction: column;
+                margin: 0 auto;
+            }
+
+            .footer h2 {
+                font-size: 24px;
+                margin-bottom: 39px;
+            }
+
+            .footer-detail {
+                gap: 0px;
+                margin-bottom: 24px;
+            }
+
+        
+            .copyright {
+                margin-top: 60px;
+                text-align: left;
+            }
+
+
+
+        }
+
+
+
+        /* 戻るボタン */
+        .to-top {
+            width: 140px;
+            aspect-ratio: 1/1;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }

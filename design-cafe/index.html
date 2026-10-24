@@ -32,10 +32,30 @@
                 <li><a href="#access">ACCESS</a></li>
             </ul>
         </nav>
+
+
+        <!--ハンバーガー用SPメニュー-->
+        <div class="hamburger">
+            <span></span>
+        </div>
+         <nav class="header_nav-sp">
+            <ul>
+                <li><a href="#aboutus">ABOUT US</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#access">ACCESS</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="main-visual">
+      <picture> 
+<source srcset="img/sp_main_vs@2x-100.jpg" media="(max-width:768px)"/>
+<!--幅が768px以下になったら縦長のFVに変更-->
         <img src="img/pc_first-100.jpg" alt="カフェ店内の様子" />
+
+    </picture> 
     </div>
 
     <section class="catchcopy container">
@@ -182,7 +202,15 @@
                 </div>
 </div>
     </footer>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".hamburger").on("click",function(){
+                $(".hamburger").toggleClass("open");
+                $(".header_nav-sp").fadeToggle();
+            });
+        });
+    </script>
 </body>
 
 </html>
