@@ -12,7 +12,7 @@ body {
     line-height: 150%;
     font-size: 14px;
     margin: 0 auto;
-   
+
 }
 
 /* ヘッダー */
@@ -61,35 +61,35 @@ footer {
     body {
         width: 100%;
     }
-}
+
     .container,
     .gallery,
     .access {
         margin-bottom: 80px;
     }
-    
+}
 
-    /* セクション見出し */
+/* セクション見出し */
+.section-title {
+    font-family: "Diplomata SC", serif;
+    color: #D20202;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+
+@media screen and (max-width:768px) {
     .section-title {
-        font-family: "Diplomata SC", serif;
-        color: #D20202;
-        font-size: 40px;
-        text-align: center;
-         margin: 0 auto 40px;
+        font-size: 32px;
+        margin-bottom: 32px;
     }
 
-    @media screen and (max-width:768px) {
-        .section-title{
-            font-size: 32px;
-            margin-bottom: 32px;
-        }
-        
-    }
+}
 
-    /* 横並びのもの */
-    header,
-    .gallery-image,
-    .news{
+/* 横並びのもの */
+header,
+.gallery-image,
+.news {
     display: flex;
     align-items: start;
 
@@ -119,13 +119,13 @@ h1 {
 
 @media screen and (max-width:768px) {
     header {
-    padding: 36px 24px;
- 
+        padding: 36px 24px;
+
     }
 
     h1 {
-    width: 244px;
-}
+        width: 244px;
+    }
 }
 
 /*ハンバーガーメニューをPCで表示しない*/
@@ -260,6 +260,24 @@ h1 {
     margin-bottom: 40px;
 }
 
+@media screen and (max-width:768px) {
+    .text h2 {
+        margin-bottom: 24px;
+    }
+
+    .catchcopy h2 {
+        font-size: 31px;
+    }
+
+    .catchcopy p {
+        font-size: 16px;
+    }
+
+    .sub-catchcopy {
+        font-family: "Alatsi", sans-serif;
+        font-size: 16px;
+    }
+}
 
 /*about us*/
 
@@ -302,9 +320,9 @@ h1 {
     }
 
     .aboutus-image {
-    width: 100%;
-    border-bottom-right-radius: 0px;
-}
+        width: 100%;
+        border-bottom-right-radius: 0px;
+    }
 
     .aboutus h3 {
         font-size: 24px;
@@ -346,7 +364,7 @@ h1 {
 @media screen and (max-width:768px) {
     .menu-contents {
         flex-direction: column;
-       gap: 40px;
+        gap: 40px;
     }
 
     .menu-type {
@@ -355,161 +373,180 @@ h1 {
 }
 
 
-    /*gallery*/
-    .gallery-image img {
-        width: calc(100%/5);
-    }
+/*gallery*/
+.gallery-image img {
+    width: calc(100%/5);
+}
 
+.gallery {
+    margin-bottom: 144px;
+}
+
+@media screen and (max-width:768px) {
     .gallery {
-        margin-bottom: 144px;
+        margin-bottom: 80px;
+    }
+}
+
+/* EVENT */
+.event-news {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 32px 0;
+    border: 1px #4F270B solid;
+    gap: 16px;
+    margin: 0 auto;
+}
+
+.news {
+    max-width: 630px;
+    width: 100%;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.news p {
+    font-size: 20px;
+
+}
+
+@media screen and (max-width:768px) {
+    .event-news {
+        width: calc(100% - 40px);
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 20px;
     }
 
-    /* EVENT */
-    .event-news {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: #ffffff;
-        padding: 32px 0;
-        border: 1px #4F270B solid;
-        gap: 16px;
-        margin: 0 auto;
-    }
 
     .news {
-        max-width: 630px;
-        width: 100%;
-        gap: 40px;
-        margin: 0 auto;
+        gap: 32px;
     }
 
     .news p {
-        font-size: 20px;
-
+        font-size: 16px;
     }
 
-    @media screen and (max-width:768px) {
-        .event-news {
-            width: calc(100% - 40px);
-            flex-direction: column;
-            gap: 16px;
-            padding: 32px 20px;
-        }
+    .news-topic {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden
+    }
+}
 
+/*マップ*/
+.map {
+    filter: grayscale(100%);
+}
 
-        .news {
-           width: calc(100% - 40px);
-            gap: 32px;
-        }
+iframe {
+    vertical-align: bottom;
+}
 
-        .news p {
-            font-size: 16px;
+@media screen and (max-width:768px) {
 
-        }
+    .access {
+        margin-bottom: 0;
     }
 
-        /*マップ*/
-        .map {
-            filter: grayscale(100%);
-        }
+    iframe {
+        height: 390pxs;
+    }
 
-        iframe {
-            vertical-align: bottom;
-        }
+
+}
 
 
 
+/* フッター */
+.footer,
+.footer-detail {
+    display: flex;
+    align-items: start;
+}
 
+footer {
+    background-color: #FFFFFF;
 
-        /* フッター */
-        .footer,
-        .footer-detail {
-            display: flex;
-            align-items: start;
-        }
+}
 
-        footer {
-            background-color: #FFFFFF;
+footer .container {
+    padding-bottom: 60px;
+    margin-bottom: 0;
+}
 
-        }
+.footer {
+    justify-content: space-between;
+    padding: 80px 0 60px;
+}
 
-        footer .container {
-            padding-bottom: 60px;
-            margin-bottom: 0;
-        }
+.footer h2 {
+    font-family: "Diplomata SC", serif;
+    font-size: 28px;
+}
 
-        .footer {
-            justify-content: space-between;
-            padding: 80px 0 60px;
-        }
+.footer-detail {
+    gap: 40px;
+    margin-bottom: 16px;
+}
 
-        .footer h2 {
-            font-family: "Diplomata SC", serif;
-            font-size: 28px;
-        }
+.footer-label {
+    width: 64px;
+    text-align: left;
+}
 
-        .footer-detail {
-            gap: 40px;
-            margin-bottom: 16px;
-        }
+.footer-info {
+    text-align: left;
+}
 
-        .footer-label {
-            width: 64px;
-            text-align: left;
-        }
-
-        .footer-info {
-            text-align: left;
-        }
-
-        .copyright {
-            margin-top: 60px;
-            text-align: left;
-        }
-
-
-
-        @media screen and (max-width:768px) {
-
-            footer .container {
-                margin: 80px 20px 0;
-            
-            
-            }
-
-            .footer {
-                width: fix-content;
-                flex-direction: column;
-                margin: 0 auto;
-            }
-
-            .footer h2 {
-                font-size: 24px;
-                margin-bottom: 39px;
-            }
-
-            .footer-detail {
-                gap: 0px;
-                margin-bottom: 24px;
-            }
-
-        
-            .copyright {
-                margin-top: 60px;
-                text-align: left;
-            }
+.copyright {
+    margin-top: 60px;
+    text-align: left;
+}
 
 
 
-        }
+@media screen and (max-width:768px) {
+
+    footer .container {
+        margin: 0 20px 0;
+        text-align: center;
+    }
+
+    .footer {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .footer h2 {
+        font-size: 24px;
+        margin-bottom: 39px;
+    }
+
+    .footer-detail {
+        gap: 0px;
+        margin-bottom: 24px;
+    }
+
+
+    .copyright {
+        margin-top: 60px;
+        text-align: left;
+    }
 
 
 
-        /* 戻るボタン */
-        .to-top {
-            width: 140px;
-            aspect-ratio: 1/1;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
+}
+
+
+
+/* 戻るボタン */
+.to-top {
+    width: 140px;
+    aspect-ratio: 1/1;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

@@ -38,7 +38,7 @@
         <div class="hamburger">
             <span></span>
         </div>
-         <nav class="header_nav-sp">
+        <nav class="header_nav-sp">
             <ul>
                 <li><a href="#aboutus">ABOUT US</a></li>
                 <li><a href="#menu">MENU</a></li>
@@ -50,12 +50,12 @@
     </header>
 
     <div class="main-visual">
-      <picture> 
-<source srcset="img/sp_main_vs@2x-100.jpg" media="(max-width:768px)"/>
-<!--幅が768px以下になったら縦長のFVに変更-->
-        <img src="img/pc_first-100.jpg" alt="カフェ店内の様子" />
+        <picture>
+            <source srcset="img/sp_main_vs@2x-100.jpg" media="(max-width:768px)" />
+            <!--幅が768px以下になったら縦長のFVに変更-->
+            <img src="img/pc_first-100.jpg" alt="カフェ店内の様子" />
 
-    </picture> 
+        </picture>
     </div>
 
     <section class="catchcopy container">
@@ -77,7 +77,12 @@
     </section>
 
     <section class="aboutus container" id="aboutus">
-        <img class="aboutus-image" src="img/pc_about-100.jpg" alt="コーヒーの写真">
+        <picture>
+            <source srcset="img/about_us@2x-100.jpg" media="(max-width:768px)" />
+            <!--幅が768px以下になったら縦長のFVに変更-->
+            <img class="aboutus-image" src="img/pc_about-100.jpg" alt="コーヒーの写真">
+        </picture>
+
 
         <div class="aboutus-text">
             <div class="section-title">ABOUT US</div>
@@ -97,7 +102,13 @@
         <div class="section-title">MENU</div>
         <div class="menu-contents">
             <div class="menu-type">
-                <img src="img/pc_menu_drink-100.jpg" alt="飲み物の写真">
+                <picture>
+                    <source srcset="img/drink_sp@2x-100.jpg" media="(max-width:768px)" />
+                    <!--幅が768px以下になったら縦長のFVに変更-->
+                    <img src="img/pc_menu_drink-100.jpg" alt="飲み物の写真">
+
+                </picture>
+
                 <div class="menu-title">DRINK</div>
                 <p>
                     ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。
@@ -105,7 +116,13 @@
             </div>
 
             <div class="menu-type">
-                <img src="img/pc_menu_food-100.jpg" alt="ケーキの写真">
+                <picture>
+                    <source srcset="img/food_sp@2x-100.jpg" media="(max-width:768px)" />
+                    <!--幅が768px以下になったら縦長のFVに変更-->
+                    <img src="img/pc_menu_food-100.jpg" alt="ケーキの写真">
+
+                </picture>
+
                 <div class="menu-title">FOOD</div>
                 <p>
                     フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。
@@ -113,7 +130,12 @@
             </div>
 
             <div class="menu-type">
-                <img src="img/pc_menu_sweets-100.jpg" alt="ケーキの写真">
+                <picture>
+                    <source srcset="img/cake_sp@2x-100.jpg" media="(max-width:768px)" />
+                    <!--幅が768px以下になったら縦長のFVに変更-->
+                    <img src="img/pc_menu_sweets-100.jpg" alt="ケーキの写真">
+                </picture>
+
                 <div class="menu-title">SWEETS</div>
                 <p>
                     スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。
@@ -140,17 +162,17 @@
         <div class="event-news">
             <div class="news">
                 <p>2024.06.23</p>
-                <p>7月はイベント出店のため0/0お休みします</p>
+                <p class="news-topic">7月はイベント出店のため0/0お休みします</p>
             </div>
 
             <div class="news">
                 <p>2024.03.15</p>
-                <p>春の新商品新発売。話題のあのブランドとコラボ</p>
+                <p class="news-topic">春の新商品新発売。話題のあのブランドとコラボ</p>
             </div>
 
             <div class="news">
                 <p>2024.02.06</p>
-                <p>コーヒーの日で30％OFFイベントを開催［3日間限定］</p>
+                <p class="news-topic">コーヒーの日で30％OFFイベントを開催［3日間限定］</p>
             </div>
         </div>
     </section>
@@ -169,43 +191,43 @@
     <footer>
         <div class="container">
             <div class="footer">
-            <h2>DESIGN CAFE</h2>
-            <div>
-                <div class="footer-detail">
-                    <p class="footer-label">営業時間</p>
-                    <p class="footer-info">OPEN 18:00 / CLOSE 24:00</p>
-                </div>
+                <h2>DESIGN CAFE</h2>
+                <div>
+                    <div class="footer-detail">
+                        <p class="footer-label">営業時間</p>
+                        <p class="footer-info">OPEN 18:00 / CLOSE 24:00</p>
+                    </div>
 
-                <div class="footer-detail">
-                    <div class="footer-label">住所</div>
-                    <div>
-                        <p class="footer-info">〒150-0022</p>
-                        <p class="footer-info">東京都渋谷区東京南123デザインビルB1</p>
+                    <div class="footer-detail">
+                        <div class="footer-label">住所</div>
+                        <div>
+                            <p class="footer-info">〒150-0022</p>
+                            <p class="footer-info">東京都渋谷区東京南123デザインビルB1</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-detail">
+                        <div class="footer-label">メール</div>
+                        <div class="footer-info">info@designcafe.tokyo</div>
                     </div>
                 </div>
-
-                <div class="footer-detail">
-                    <div class="footer-label">メール</div>
-                    <div class="footer-info">info@designcafe.tokyo</div>
-                </div>
             </div>
-            </div>
-                <p class="copyright">©2021 DESIGN CAFE</p>
+            <p class="copyright">©2021 DESIGN CAFE</p>
 
         </div>
+        </div>
+        <div>
+            <div class="to-top">
+                <a href="#header">
+                    <img src="img/to_top@2x.png" alt="ページトップに戻る">
+                </a>
             </div>
-            <div>
-                <div class="to-top">
-                    <a href="#header">
-                        <img src="img/to_top@2x.png" alt="ページトップに戻る">
-                    </a>
-                </div>
-</div>
+        </div>
     </footer>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $(function(){
-            $(".hamburger").on("click",function(){
+        $(function () {
+            $(".hamburger").on("click", function () {
                 $(".hamburger").toggleClass("open");
                 $(".header_nav-sp").fadeToggle();
             });
