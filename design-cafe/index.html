@@ -7,6 +7,21 @@
     <title>デザインカフェ</title>
 
     <link rel="stylesheet" href="css/reset.css" />
+
+    <!---JQueryのプラグイン　プラグインのデザインじゃないデザインに上書きする可能性があるのでstyle.cssの前に置く-->
+    <!--slickのプラグイン-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+
+        <!--remodalのプラグイン-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js"></script>
+
+
     <link rel="stylesheet" href="css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,6 +69,13 @@
             <source srcset="img/sp_main_vs@2x-100.jpg" media="(max-width:768px)" />
             <!--幅が768px以下になったら縦長のFVに変更-->
             <img src="img/pc_first-100.jpg" alt="カフェ店内の様子" />
+
+        </picture>
+
+        <picture>
+            <source srcset="img/sp_main_vs_2@2x-100.jpg" media="(max-width:768px)" />
+            <!--幅が768px以下になったら縦長のFVに変更-->
+            <img src="img/slider_2.jpg" alt="カフェ店内の様子" />
 
         </picture>
     </div>
@@ -153,6 +175,7 @@
             <img src="img/pc_gallary_03-100.jpg" alt="">
             <img src="img/pc_gallary_04-100.jpg" alt="">
             <img src="img/pc_gallary_05-100.jpg" alt="">
+            <img src="img/pc_gallary_05-100.jpg" alt="">
         </div>
     </section>
 
@@ -225,12 +248,41 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--JQueryのプラグイン-->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $(function () {
             $(".hamburger").on("click", function () {
                 $(".hamburger").toggleClass("open");
                 $(".header_nav-sp").fadeToggle();
             });
+
+            $(".main-visual").slick({
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,//次のimgに行くための矢印を消す
+                dots: true
+            }
+
+            );
+        });
+
+        $(".gallery-image").slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToShow: 5,
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 769,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: true,//左右に隣の写真を見せる
+                        centerPadding: "20%"//左右の写真が見える幅
+                    }
+                }
+            ]
         });
     </script>
 </body>

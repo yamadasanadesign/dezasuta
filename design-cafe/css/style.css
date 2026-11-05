@@ -24,6 +24,7 @@ body {
     position: absolute;
     padding: 0 4.4%;
     /*64/1440*/
+    z-index: 99999;
 }
 
 
@@ -236,6 +237,10 @@ h1 {
     width: 100%;
     margin-bottom: 132px;
 }
+/*ページネーション*/
+.slick-dots li button:before{
+    font-size:10px;
+}
 
 
 
@@ -294,7 +299,7 @@ h1 {
 }
 
 .aboutus-image {
-    width: 44%;
+    width: 440px;
     object-fit: cover;
     border-bottom-right-radius: 64px;
 }
@@ -374,9 +379,11 @@ h1 {
 
 
 /*gallery*/
+/*slickを入れるので不要になった
 .gallery-image img {
     width: calc(100%/5);
 }
+*/
 
 .gallery {
     margin-bottom: 144px;
