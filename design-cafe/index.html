@@ -15,13 +15,12 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
 
-        <!--remodalのプラグイン-->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.min.css">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js"></script>
+    <!--remodalのプラグイン-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.min.css">
 
-
+    <!--デザイン用CSS-->
     <link rel="stylesheet" href="css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -170,13 +169,58 @@
         <div class="section-title">GALLERY</div>
 
         <div class="gallery-image">
-            <img src="img/pc_gallary_01-100.jpg" alt="">
-            <img src="img/pc_gallary_02-100.jpg" alt="">
-            <img src="img/pc_gallary_03-100.jpg" alt="">
-            <img src="img/pc_gallary_04-100.jpg" alt="">
-            <img src="img/pc_gallary_05-100.jpg" alt="">
-            <img src="img/pc_gallary_05-100.jpg" alt="">
+          
+                <a href="#modal_01" class="btn">
+                    <img src="img/pc_gallary_01-100.jpg" alt=""></a>
+        
+            <a href="#modal_02" class="btn"><img src="img/pc_gallary_02-100.jpg" alt="">
+            </a>
+
+            <a href="#modal_03" class="btn"> <img src="img/pc_gallary_03-100.jpg" alt="">
+            </a>
+     
+            <a href="#modal_04" class="btn"> <img src="img/pc_gallary_04-100.jpg" alt="">
+            </a>
+    
+            <a href="#modal_05" class="btn"> <img src="img/pc_gallary_05-100.jpg" alt="">
+            </a>
+
+            <a href="#modal_06" class="btn"> <img src="img/pc_gallary_05-100.jpg" alt="">
+            </a>
+</div>
+    
+<!--remodal本体-->
+        <div class="remodal" data-remodal-id="modal_01">
+            <div><img src="img/pc_gallary_01-100.jpg" alt=""></div>
+            <button data-remodal-action="cancel" class="remodal-cancel">×</button>
         </div>
+
+        <div class="remodal" data-remodal-id="modal_02">
+            <div><img src="img/pc_gallary_02-100.jpg" alt=""></div>
+            <button data-remodal-action="cancel" class="remodal-cancel">×</button>
+        </div>
+
+        <div class="remodal" data-remodal-id="modal_03">
+            <div><img src="img/pc_gallary_03-100.jpg" alt=""></div>
+            <button data-remodal-action="cancel" class="remodal-cancel">×</button>
+        </div>
+
+        <div class="remodal" data-remodal-id="modal_04">
+            <div><img src="img/pc_gallary_04-100.jpg" alt=""></div>
+            <button data-remodal-action="cancel" class="remodal-cancel">×</button>
+        </div>
+
+        <div class="remodal" data-remodal-id="modal_05">
+            <div><img src="img/pc_gallary_05-100.jpg" alt=""></div>
+            <button data-remodal-action="cancel" class="remodal-cancel">×</button>
+        </div>
+
+        <div class="remodal" data-remodal-id="modal_06">
+            <div><img src="img/pc_gallary_05-100.jpg" alt=""></div>
+            <button data-remodal-action="cancel" class="remodal-cancel">×</button>
+        </div>
+
+
     </section>
 
     <section class="event container" id="event">
@@ -247,9 +291,19 @@
             </div>
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
     <!--JQueryのプラグイン-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--slick-->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!--remodal-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js"></script>
+
+
+
     <script>
         $(function () {
             $(".hamburger").on("click", function () {

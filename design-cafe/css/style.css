@@ -389,6 +389,67 @@ h1 {
     margin-bottom: 144px;
 }
 
+.btn {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+.btn:hover {
+  color: #ffffff;
+}
+.remodal {
+  position: relative;
+  padding: 0;
+}
+.remodal img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.remodal-cancel{
+    width: 24px;
+    aspect-ratio: 1/1;
+        min-width: 10px;
+    margin:8px ;
+    padding: 0;
+    color: #ffffff;
+    background-color: #ffffff00;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+
+.remodal-cancel:hover,
+.remodal-cancel:focus{
+background-color: #ffffff00;
+transform:scale(1.2);
+
+}
+
+/*
+.remodal-cancel {
+  color: #fff;
+  background: #2b2a27;
+  width: 100%;
+  margin-top: 25px;
+}
+.remodal-cancel:hover {
+  background: #6b675f;
+}
+
+*/
+ 
+/* 動きを減らす設定のとき */
+@media (prefers-reduced-motion: reduce) {
+  .remodal, .remodal-overlay { animation: none !important; }
+  .btn { transition: none; }
+}
+
 @media screen and (max-width:768px) {
     .gallery {
         margin-bottom: 80px;
